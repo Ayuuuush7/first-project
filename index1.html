@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Date Invitation</title>
+    <style>
+        /* Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }  
+
+        .container {
+            text-align: center;
+        }
+
+        .invitation-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .invitation-card p {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .response {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ice Cream Date Invitation</h1>
+        <div class="invitation-card">
+            <p>Would you like to go for an ice cream date?</p>
+            <button onclick="respond('yes')">Yes</button>
+            <button onclick="respond('no')">No</button>
+        </div>
+        <div class="response" id="response"></div>
+    </div>
+
+    <script>
+        // JavaScript
+        function respond(answer) {
+            if (answer === 'yes') {
+                
+                window.location.href = 'thankyou.html';
+            } else if (answer === 'no') {
+               
+                document.getElementById('response').innerText = 'Maan jaa na yrr';
+            }
+        }
+    </script>
+</body>
+</html>
